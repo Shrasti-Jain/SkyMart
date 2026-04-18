@@ -24,6 +24,7 @@ const HomeScreen = () => {
   cartItems.map((e)=>{
     count+=e.quantity
   })
+
   return (
     <div className='flex flex-col gap-10 py-5 px-40'>
       <div className='border flex justify-between items-center border-white rounded-2xl p-10 '>
@@ -91,13 +92,10 @@ const HomeScreen = () => {
          <h5 onClick={()=>navigate('/home/shop')} className='flex gap-2 items-center text-sm cursor-pointer text-[#E2FF4C]'>View All <ArrowRight color='#E2FF4C' size={15}/></h5>
        </div>
         <div className='mt-8 flex flex-wrap gap-4'>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            <Card count={5} category={"Beauty"}/>
+            <Card count={5} category={"Fragrances"}/>
+            <Card count={5} category={"Furniture"}/>
+            <Card count={15} category={"Groceries"}/>
         </div>
         <div className='mt-8 flex gap-8'>
           <BigCard elem={topProducts}  cate={"Top Rated"}/>
